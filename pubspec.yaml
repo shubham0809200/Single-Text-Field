@@ -1,6 +1,6 @@
 name: single_text_field
 description: A simple text field for Flutter. It is a simple text field with a label and a hint text. and more..
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/shubham0809200/Single-Text-Field
 
 environment:

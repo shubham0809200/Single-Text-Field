@@ -24,38 +24,36 @@ For help getting started with Flutter, view the online [documentation](https://f
 
 ```dart
 
-class SingleTextField extends StatefulWidget {
-  const SingleTextField({super.key});
+class SingleTextFieldExample extends StatefulWidget {
+  const SingleTextFieldExample({super.key});
 
   @override
-  SingleTextFieldState createState() => SingleTextFieldState();
+  SingleTextFieldExampleState createState() => SingleTextFieldExampleState();
 }
 
-class SingleTextFieldState extends State<SingleTextField> {
+class SingleTextFieldExampleState extends State<SingleTextFieldExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Drop Down Menu'),
+          title: const Text('Single Text Field Example'),
         ),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 8,
-                ),
-                SingleAnswer(
+                const SizedBox(height: 8),
+                SingleTextField(
                   title: 'First Name',
                   controller: TextEditingController(),
                   onChanged: ((value) {}),
                   onTap: () {},
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
-                SingleAnswer(
+                const SizedBox(height: 8),
+                const SingleTextField(), // Default
+                const SizedBox(height: 8),
+                SingleTextField(
                   title: 'Last Name',
                   controller: TextEditingController(),
                   onChanged: ((value) {}),
@@ -66,21 +64,22 @@ class SingleTextFieldState extends State<SingleTextField> {
   }
 }
 
+
 ```
 
 ## Parameters
 
-| Parameter     | Type                  | Description                                              |
-| :------------ | :-------------------- | :------------------------------------------------------- |
-| title         | String?               | The title of the text field                              |
-| prefixText    | String?               | The prefix text of the text field                        |
-| textInputType | TextInputType?        | The type of the text field                               |
-| controller    | TextEditingController | The controller of the text field                         |
-| onChanged     | Function              | The function to be called when the text field is changed |
-| label         | String?               | The label of the text field                              |
-| hint          | String?               | The hint of the text field                               |
-| enable        | bool?                 | The enabled state of the text field                      |
-| onTap         | Function?             | The function to be called when the text field is tapped  |
+| Parameter     | Type                   | Description                                              |
+| :------------ | :--------------------- | :------------------------------------------------------- |
+| title         | String?                | The title of the text field                              |
+| prefixText    | String?                | The prefix text of the text field                        |
+| textInputType | TextInputType?         | The type of the text field                               |
+| controller    | TextEditingController? | The controller of the text field                         |
+| onChanged     | Function?              | The function to be called when the text field is changed |
+| label         | String?                | The label of the text field                              |
+| hint          | String?                | The hint of the text field                               |
+| enable        | bool?                  | The enabled state of the text field                      |
+| onTap         | Function?              | The function to be called when the text field is tapped  |
 
 ## Features and bugs
 

@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class SingleAnswer extends StatelessWidget {
+class SingleTextField extends StatelessWidget {
   final String? title;
   final String? prefixText;
   final TextInputType? textInputType;
-  final TextEditingController controller;
-  final Function(String) onChanged;
+  final TextEditingController? controller;
+  final Function(String)? onChanged;
   final String? label;
   final String? hint;
   final bool? enable;
   final Function()? onTap;
-  const SingleAnswer(
+  const SingleTextField(
       {Key? key,
       this.title,
       this.prefixText,
       this.textInputType,
-      required this.controller,
-      required this.onChanged,
+      this.controller,
+      this.onChanged,
       this.label,
       this.hint,
       this.enable,
@@ -43,7 +43,7 @@ class SingleAnswer extends StatelessWidget {
           ),
         TextField(
           enabled: enable ?? true,
-          controller: controller,
+          controller: controller ?? TextEditingController(),
           style: TextStyle(
               fontSize: 14,
               color: enable != null
@@ -58,8 +58,8 @@ class SingleAnswer extends StatelessWidget {
               prefixText: prefixText),
           keyboardType: textInputType ?? TextInputType.multiline,
           maxLines: null,
-          onChanged: onChanged,
-          onTap: onTap,
+          onChanged: onChanged ?? (value) {},
+          onTap: onTap ?? () {},
         ),
       ],
     );

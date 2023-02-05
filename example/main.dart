@@ -11,47 +11,45 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Drop Down Menu',
+      title: 'Single Text Field Example',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SingleTextField(),
+      home: const SingleTextFieldExample(),
     );
   }
 }
 
-class SingleTextField extends StatefulWidget {
-  const SingleTextField({super.key});
+class SingleTextFieldExample extends StatefulWidget {
+  const SingleTextFieldExample({super.key});
 
   @override
-  SingleTextFieldState createState() => SingleTextFieldState();
+  SingleTextFieldExampleState createState() => SingleTextFieldExampleState();
 }
 
-class SingleTextFieldState extends State<SingleTextField> {
+class SingleTextFieldExampleState extends State<SingleTextFieldExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Drop Down Menu'),
+          title: const Text('Single Text Field Example'),
         ),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 8,
-                ),
-                SingleAnswer(
+                const SizedBox(height: 8),
+                SingleTextField(
                   title: 'First Name',
                   controller: TextEditingController(),
                   onChanged: ((value) {}),
                   onTap: () {},
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
-                SingleAnswer(
+                const SizedBox(height: 8),
+                const SingleTextField(), // Default
+                const SizedBox(height: 8),
+                SingleTextField(
                   title: 'Last Name',
                   controller: TextEditingController(),
                   onChanged: ((value) {}),
