@@ -1,6 +1,6 @@
-# Single-Text-Field [![pub package](https://img.shields.io/pub/v/drop_down_list_menu.svg)](https://pub.dartlang.org/packages/single_text_field)
+# Single-Text-Field [![pub package](https://img.shields.io/pub/v/single_text_field.svg)](https://pub.dartlang.org/packages/single_text_field)
 
-A simple text field for Flutter. It is a simple text field with a label and a hint text. It is a simple text field with a label and a hint text. It is a simple text field with a label and a hint text.
+A simple text field for Flutter. It is a simple text field with a label and a hint text. It also has a prefix text and a title. It also has a function to be called when the text field is tapped. and more...
 
 ## Getting Started
 
